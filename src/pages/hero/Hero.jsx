@@ -15,7 +15,7 @@ export default function Hero() {
     const nama = params.get("nama");
 
     if (nama) {
-      setGuestName(nama.replace(/-/g, " ")); // biar "I-Gede" jadi "I Gede"
+      setGuestName(nama.replace(/-/g, " "));
     }
   }, []);
 
@@ -124,8 +124,8 @@ export default function Hero() {
         </h1>
 
         {/* Nama Mempelai */}
-        <div className="mt-10 mx-auto text-center">
-          <h1 className="text-5xl" data-aos="zoom-in" data-aos-delay="400">
+        <div className="mt-5 mx-auto text-center">
+          <h1 className="text-4xl" data-aos="zoom-in" data-aos-delay="400">
             Suka Wirajaya
           </h1>
 
@@ -136,7 +136,7 @@ export default function Hero() {
             data-aos-delay="500"
           />
 
-          <h1 className="text-5xl" data-aos="zoom-in" data-aos-delay="600">
+          <h1 className="text-4xl" data-aos="zoom-in" data-aos-delay="600">
             Komang Santini
           </h1>
         </div>
@@ -170,7 +170,7 @@ export default function Hero() {
         </div>
 
         <div 
-          className="mx-auto w-[70%] mt-3 border py-2 rounded-3xl flex justify-center items-center" 
+          className="mx-auto w-[70%] mt-1 border py-2 rounded-3xl flex justify-center items-center" 
           data-aos="zoom-in"
           data-aos-delay="600"
         >
@@ -187,7 +187,7 @@ export default function Hero() {
           onClick={handleOpenInvitation}
           className="
             absolute left-1/2 -translate-x-1/2 
-            bottom-30
+            bottom-48
             px-5 py-2
             bg-accent backdrop-blur-sm 
             text-white rounded-xl shadow-lg 

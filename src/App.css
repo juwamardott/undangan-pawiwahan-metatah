@@ -10,6 +10,15 @@
   --color-dark-200: #111827;
 }
 
+html, body {
+  overscroll-behavior: none;
+  height: 100%;
+}
+body.lock-scroll {
+  overflow: hidden !important;
+}
+
+
 .alex {
   font-family: "Alex Brush", cursive;
   font-weight: 400;
