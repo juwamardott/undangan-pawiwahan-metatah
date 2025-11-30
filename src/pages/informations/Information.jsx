@@ -77,7 +77,7 @@ export default function Information() {
 
       {/* ISI TEXT */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 top-15 w-[77%] text-center text-accent"
+        className="absolute left-1/2 -translate-x-1/2 top-15 w-[77%] text-center text-darkAccent"
         data-aos="fade-up"
         data-aos-delay="300"
       >

@@ -69,31 +69,48 @@ export default function Comments() {
 
   // Submit
   const sendComment = async (e) => {
-    e.preventDefault();
-    if (!name || !notes || !attendance) {
-      toast.error("Nama, ucapan, dan kehadiran wajib diisi!");
-      return;
-    }
+  e.preventDefault();
 
-    const { error } = await supabase.from("comment").insert([
+  // Validasi
+  if (!name) {
+    toast.error("Nama wajib diisi!");
+    return;
+  }
+  if (!notes) {
+    toast.error("Berikan ucapan!");
+    return;
+  }
+  if (!attendance) {
+    toast.error("Konfirmasi kehadiramu!");
+    return;
+  }
+
+  // Gunakan toast.promise untuk loading
+  await toast.promise(
+    supabase.from("comment").insert([
       {
         name,
         notes,
         attendance,
       },
-    ]);
-
-    if (error) {
-      toast.error("Gagal menyimpan komentar");
-      return;
+    ]),
+    {
+      loading: "Mengirim komentar...",
+      success: "Komentar berhasil dikirim 🎉",
+      error: (err) => {
+        // Jika Supabase kasih error detail
+        return err?.message || "Gagal menyimpan komentar";
+      },
     }
+  );
 
-    toast.success("Komentar berhasil dikirim 🎉");
-    setName("");
-    setNotes("");
-    setAttendance("");
-    setRefreshKey((prev) => prev + 1);
-  };
+  // Reset form
+  setName("");
+  setNotes("");
+  setAttendance("");
+  setRefreshKey((prev) => prev + 1);
+};
+
 
   // Realtime Supabase
   useEffect(() => {

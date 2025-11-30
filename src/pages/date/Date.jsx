@@ -42,7 +42,7 @@ export default function Date() {
 
         {/* Bunga kiri */}
         <div className='absolute -top-10 rotate-30 -left-12 z-9999' data-aos="fade-down-right">
-          <img src='/bunga1.png' className='w-70'/>
+          <img src='/bunga1.png' className='w-68'/>
         </div>
 
         {/* Bunga kanan atas */}
@@ -65,7 +65,7 @@ export default function Date() {
 
                <div className='w-[90%] mx-auto h-[650px] rounded-3xl border border-primary2' data-aos="fade-up">
 
-                <h1 className='text-center mt-15 w-[96%]' data-aos="fade-up">
+                <h1 className='text-center mt-20 w-[96%]' data-aos="fade-up">
                   Merupakan suatu kehormatan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir.
                 </h1>
 
