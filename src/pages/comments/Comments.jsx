@@ -71,15 +71,15 @@ export default function Comments() {
   const sendComment = async (e) => {
     e.preventDefault();
     if(!name){
-      toast.info("Nama wajib diisi!");
+      toast.error("Nama wajib diisi!");
       return;
 
     }else if(!notes){
-      toast.info("Berikan ucapan!");
+      toast.error("Berikan ucapan!");
       return;
 
     }else if(!attendance){
-      toast.info("Konfirmasi kehadiramu!");
+      toast.error("Konfirmasi kehadiramu!");
       return;
       
     }

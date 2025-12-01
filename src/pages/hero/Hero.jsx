@@ -71,7 +71,7 @@ export default function Hero() {
       data-aos="fade-in"
     >
 
-    <audio ref={audioRef} src="/jadi-debu.mp3" preload="auto" hidden></audio>
+    <audio ref={audioRef} src="/seribu_bidadari.mp3" preload="auto" hidden></audio>
 
 
       {/* ORNAMEN 9 */}
@@ -193,7 +193,6 @@ export default function Hero() {
             text-white rounded-xl shadow-lg 
             text-base font-bold border border-white/50
             flex items-center gap-2
-            hover:bg-white transition
             z-9999
             marcellus
             mx-auto
